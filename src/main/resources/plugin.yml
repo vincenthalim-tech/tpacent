@@ -1,0 +1,29 @@
+name: LockTPA
+version: 1.0
+main: id.custom.locktpa.LockTPA
+api-version: '1.20'
+description: Sistem TPA dengan fitur lock koordinat lokasi tanpa proteksi PvP.
+
+commands:
+  tpa:
+    description: Mengirim permintaan teleport ke pemain lain.
+    usage: /tpa <player>
+  tpahere:
+    description: Meminta pemain lain teleport ke lokasi Anda.
+    usage: /tpahere <player>
+  tpaccept:
+    description: Menerima permintaan TPA dan mengunci lokasi saat ini.
+    usage: /tpaccept
+    aliases: [tpyes]
+  tpdeny:
+    description: Menolak permintaan TPA.
+    usage: /tpdeny
+    aliases: [tpno]
+  tpaauto:
+    description: Mengaktifkan atau menonaktifkan terima TPA otomatis.
+    usage: /tpaauto
+  tpareload:
+    description: Memuat ulang konfigurasi plugin.
+    usage: /tpareload
+    permission: locktpa.admin
+    
