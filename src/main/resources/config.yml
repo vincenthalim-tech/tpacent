@@ -1,0 +1,33 @@
+settings:
+  # Waktu tunggu (detik) sebelum pemain berpindah setelah di-accept.
+  # Isi 0 jika ingin langsung teleport tanpa jeda.
+  teleport-delay: 3
+
+  # Batas waktu (detik) permintaan TPA kedaluwarsa jika tidak direspon.
+  request-expire: 60
+
+  # Batalkan teleportasi jika pengirim TPA bergerak saat masa tunggu (teleport-delay)?
+  cancel-on-move: false
+
+  # Pastikan tidak ada kebal damage (NoDamageTicks = 0) setelah teleportasi
+  instant-pvp-vulnerable: true
+
+messages:
+  prefix: "&8[&6LockTPA&8] &r"
+  only-player: "&cPerintah ini hanya bisa digunakan oleh pemain."
+  player-not-found: "&cPemain tidak ditemukan atau sedang offline."
+  self-request: "&cKamu tidak bisa mengirim TPA ke diri sendiri."
+  request-sent: "&aPermintaan TPA dikirim ke &e%player%&a."
+  request-received: "&e%player% &aingin teleport ke lokasimu. Ketik &6/tpaccept &auntuk menerima atau &c/tpdeny &auntuk menolak."
+  request-here-received: "&e%player% &amemintamu teleport ke lokasinya. Ketik &6/tpaccept &auntuk menerima."
+  no-pending: "&cKamu tidak memiliki permintaan TPA yang aktif."
+  request-expired: "&cPermintaan TPA telah kedaluwarsa."
+  request-denied-target: "&cKamu menolak permintaan TPA dari &e%player%&c."
+  request-denied-sender: "&e%player% &ctelah menolak permintaan TPA-mu."
+  location-locked: "&aLokasi dikunci! &e%player% &aakan diteleportasi ke titik ini dalam &6%time% detik&a."
+  teleporting-in: "&aLokasi tujuan telah dikunci! Teleportasi dalam &6%time% detik&a..."
+  teleported: "&aBerhasil diteleportasi ke koordinat terkunci!"
+  auto-enabled: "&aMode &e/tpaauto &aDIAKTIFKAN. Semua TPA masuk akan langsung mengunci lokasimu."
+  auto-disabled: "&cMode &e/tpaauto &cDINONAKTIFKAN."
+  reloaded: "&aKonfigurasi LockTPA berhasil dimuat ulang!"
+  
