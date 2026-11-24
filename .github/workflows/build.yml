@@ -1,0 +1,35 @@
+name: Build LockTPA JAR
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v5
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: 'maven'
+
+      - name: Build with Maven
+        # Jika pom.xml ada di root repo, cukup: mvn -B package
+        # Jika ada di dalam folder LockTPA, gunakan: mvn -B package -f LockTPA/pom.xml
+        run: mvn -B package
+
+      - name: Upload JAR artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: LockTPA-jar
+          path: "**/target/LockTPA-*.jar"
+          
